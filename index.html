@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TALL PINES SCHOOL - SHEIKHUPURA | Institutional ERP & SIS</title>
+  <meta name="description" content="Official Modern School Management System for Tall Pines School Sheikhupura. Complete Student Information, Fee Challans, Examinations, Staff HR, and AI School Assistant.">
+  <meta name="author" content="Design by Saima Mushtaq (saimbakar90@gmail.com)">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Core & Print Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- ==========================================================================
+         SIDEBAR NAVIGATION
+         ========================================================================== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <img src="assets/logo.png" alt="Tall Pines School Logo" class="sidebar-logo dynamic-school-logo">
+        <div class="sidebar-brand-info">
+          <h1 class="dynamic-school-name">TALL PINES SCHOOL</h1>
+          <span class="dynamic-school-tagline">HIRAN MINAR CAMPUS — SHEIKHUPURA</span>
+        </div>
+        <button class="mobile-sidebar-close" onclick="window.TPS_APP.toggleSidebar(false)" aria-label="Close Sidebar" style="margin-left: auto; background: none; border: none; color: #fff; cursor: pointer; padding: 4px; display: none;">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Management</div>
+        <a class="nav-link active" data-route="dashboard" onclick="window.TPS_APP.navigate('dashboard')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          Dashboard
+        </a>
+        <a class="nav-link" data-route="admissions" onclick="window.TPS_APP.navigate('admissions')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+          Admissions Funnel
+          <span class="nav-badge">3 New</span>
+        </a>
+        <a class="nav-link" data-route="students" onclick="window.TPS_APP.navigate('students')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          Student Directory
+        </a>
+        <a class="nav-link" data-route="academics" onclick="window.TPS_APP.navigate('academics')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          Classes & Timetable
+        </a>
+        <a class="nav-link" data-route="attendance" onclick="window.TPS_APP.navigate('attendance')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          Attendance Sheets
+        </a>
+        <a class="nav-link" data-route="fees" onclick="window.TPS_APP.navigate('fees')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          Fees & Bank Challans
+          <span class="nav-badge" style="background: rgba(220, 38, 38, 0.25); color: #fca5a5;">Defaulters</span>
+        </a>
+        <a class="nav-link" data-route="exams" onclick="window.TPS_APP.navigate('exams')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Examinations & DMC
+        </a>
+
+        <div class="nav-section-title">Administration & Operations</div>
+        <a class="nav-link" data-route="accounting" onclick="window.TPS_APP.navigate('accounting')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+          Accounts & Expenses
+        </a>
+        <a class="nav-link" data-route="staff" onclick="window.TPS_APP.navigate('staff')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          Staff & HR Payroll
+        </a>
+        <a class="nav-link" data-route="communication" onclick="window.TPS_APP.navigate('communication')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          Notices & WhatsApp Hub
+        </a>
+        <a class="nav-link" data-route="library" onclick="window.TPS_APP.navigate('library')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          Library & Inventory
+        </a>
+        <a class="nav-link" data-route="certificates" onclick="window.TPS_APP.navigate('certificates')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          Letterhead & Certificates
+        </a>
+        <a class="nav-link" data-route="reports" onclick="window.TPS_APP.navigate('reports')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Reports & Analytics
+        </a>
+
+        <div class="nav-section-title">Specialized Portals</div>
+        <a class="nav-link" data-route="portal-teacher" onclick="window.TPS_APP.navigate('portal-teacher')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h20v14H2z"></path><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>
+          Teacher Portal
+        </a>
+        <a class="nav-link" data-route="portal-student" onclick="window.TPS_APP.navigate('portal-student')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+          Student Portal
+        </a>
+        <a class="nav-link" data-route="portal-parent" onclick="window.TPS_APP.navigate('portal-parent')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          Parent Portal
+        </a>
+
+        <div class="nav-section-title">Institutional Intelligence</div>
+        <a class="nav-link" style="color: #fde68a;" onclick="window.TPS_APP.openAiAssistant()">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"></path></svg>
+          AI School Assistant
+          <span class="nav-badge" style="background: rgba(201, 147, 38, 0.4); color: #fff;">AI 2026</span>
+        </a>
+        <a class="nav-link" data-route="settings" onclick="window.TPS_APP.navigate('settings')">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          System Settings & Branding
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-watermark-credit">
+          <span class="sw-title">✨ Design by Saima Mushtaq</span>
+          <span class="sw-email">saimbakar90@gmail.com</span>
+        </div>
+        <div class="user-status-card" onclick="window.TPS_APP.openRoleSwitcher()" style="cursor: pointer;" title="Click to Switch User Role">
+          <div class="user-avatar" id="header-user-avatar">SM</div>
+          <div class="user-details">
+            <div class="user-name" id="header-user-name">Saima Mushtaq</div>
+            <div class="user-role" id="header-user-role">Super Admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop" onclick="window.TPS_APP.toggleSidebar(false)"></div>
+
+    <!-- ==========================================================================
+         MAIN CONTENT AREA
+         ========================================================================== -->
+    <div class="main-content">
+      <!-- INSTITUTIONAL BACKGROUND LOGO WATERMARK -->
+      <div class="page-bg-watermark" id="page-bg-watermark" aria-hidden="true" style="background-image: url('assets/logo.png');"></div>
+
+      <!-- TOP HEADER -->
+      <header class="top-header">
+        <div class="header-left">
+          <button class="mobile-menu-toggle" onclick="window.TPS_APP.toggleSidebar()" aria-label="Toggle navigation">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <div class="header-title-wrap">
+            <h2 class="dynamic-school-name">TALL PINES SCHOOL</h2>
+            <p class="dynamic-school-tagline">Hiran Minar Campus — Sheikhupura</p>
+          </div>
+        </div>
+
+        <!-- ==========================================================================
+             DEVELOPER WATERMARK BADGE (NON-OVERLAPPING, 100% VISIBLE & PROMINENT)
+             ========================================================================== -->
+        <div class="header-center">
+          <div class="header-dev-watermark-badge" title="Official System Architecture & Design by Saima Mushtaq">
+            <div class="dev-watermark-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="dev-watermark-content">
+              <span class="dev-watermark-name">Design by Saima Mushtaq</span>
+              <span class="dev-watermark-email">saimbakar90@gmail.com</span>
+            </div>
+            <span class="dev-watermark-tag">Architect</span>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <!-- Global Search -->
+          <div class="header-search">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="global-search-input" placeholder="Search (Ctrl+K)..." onkeydown="if(event.key === 'Enter') window.TPS_APP.handleGlobalSearch(this.value);">
+          </div>
+
+          <!-- Color Theme Customizer Button -->
+          <button class="header-btn" onclick="window.TPS_APP.openThemeModal()" title="Change Color Themes & Custom Colors (رنگ تبدیل کریں)">
+            <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a10 10 0 0 1 10 10c0 2.5-1.5 4-3.5 4h-2a2 2 0 0 0-2 2c0 .8-.5 1.5-1.2 1.8-.4.2-.8.2-1.3.2A10 10 0 0 1 12 2z"></path>
+              <circle cx="8" cy="10" r="1.5" fill="currentColor"></circle>
+              <circle cx="12" cy="7" r="1.5" fill="currentColor"></circle>
+              <circle cx="16" cy="10" r="1.5" fill="currentColor"></circle>
+            </svg>
+          </button>
+
+          <!-- School Branding Customizer Button -->
+          <button class="header-btn" onclick="window.TPS_APP.openBrandingModal()" title="Custom School Branding & Logo (لوگو اور سکول کا نام تبدیل کریں)">
+            <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+          </button>
+
+          <!-- English <-> Urdu Toggle -->
+          <button class="lang-switch-btn" id="lang-switch-btn" onclick="window.TPS_APP.toggleLanguage()" title="Switch Language (Urdu / English)">
+            <span>اردو (Urdu)</span>
+          </button>
+
+          <!-- Role Switcher Dropdown Badge -->
+          <div class="role-badge-selector" onclick="window.TPS_APP.openRoleSwitcher()" title="Change Role Simulation">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+            <span>Role Switcher</span>
+          </div>
+
+          <!-- AI Assistant Header Shortcut with Mic Support -->
+          <button class="header-btn" onclick="window.TPS_APP.openAiAssistant()" title="Open Gemini AI Assistant with Voice Mic (مائیک اور اے آئی)">
+            <svg width="18" height="18" fill="none" stroke="var(--secondary)" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"></path></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- DYNAMIC CONTENT BODY -->
+      <main id="content-area" class="content-body"></main>
+
+      <!-- APP MAIN FOOTER -->
+      <footer class="app-main-footer">
+        <div class="footer-dev-credit">
+          <span>✨ System Architecture &amp; <strong>Design by Saima Mushtaq</strong> — <a href="mailto:saimbakar90@gmail.com">saimbakar90@gmail.com</a></span>
+        </div>
+        <div class="footer-school-credit">
+          <strong>TALL PINES SCHOOL</strong> — HIRAN MINAR CAMPUS, SHEIKHUPURA
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       GENERIC MODAL DIALOG
+       ========================================================================== -->
+  <div class="modal-overlay" id="generic-modal-overlay">
+    <div class="modal-dialog modal-md" id="generic-modal-dialog">
+      <div class="modal-header">
+        <h3 id="generic-modal-title">Institutional Notice</h3>
+        <button class="modal-close-btn" onclick="window.TPS_APP.closeModal()" aria-label="Close dialog">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="generic-modal-body"></div>
+      <div class="modal-footer" id="generic-modal-footer"></div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATIONS CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ==========================================================================
+       APPLICATION SCRIPTS
+       ========================================================================== -->
+  <script src="js/state.js"></script>
+  <script src="js/branding.js"></script>
+  <script src="js/ai-service.js"></script>
+  <script src="js/modules/dashboard.js"></script>
+  <script src="js/modules/students.js"></script>
+  <script src="js/modules/admissions.js"></script>
+  <script src="js/modules/academics.js"></script>
+  <script src="js/modules/attendance.js"></script>
+  <script src="js/modules/fees.js"></script>
+  <script src="js/modules/exams.js"></script>
+  <script src="js/modules/portals.js"></script>
+  <script src="js/modules/staff-hr.js"></script>
+  <script src="js/modules/communication.js"></script>
+  <script src="js/modules/accounting.js"></script>
+  <script src="js/modules/library-inventory.js"></script>
+  <script src="js/modules/certificates.js"></script>
+  <script src="js/modules/reports.js"></script>
+  <script src="js/modules/settings.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

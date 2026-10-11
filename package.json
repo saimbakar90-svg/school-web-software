@@ -1,0 +1,21 @@
+{
+  "name": "tall-pines-school-erp",
+  "version": "1.0.0",
+  "description": "Tall Pines School Sheikhupura - Modern Institutional ERP & AI Voice Assistant",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'Static ERP software ready for production deployment'"
+  },
+  "keywords": [
+    "school-management",
+    "erp",
+    "education",
+    "pakistan-school",
+    "gemini-ai",
+    "urdu-voice-assistant",
+    "tall-pines-school"
+  ],
+  "author": "Saima Mushtaq <saimbakar90@gmail.com>",
+  "license": "MIT"
+}
